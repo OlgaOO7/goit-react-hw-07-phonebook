@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { deleteContact } from "redux/operations";
+import { deleteContact } from "../../redux/operations";
 import css from './Contact.module.css';
 
 export function Contact({ name, number, id }) {
@@ -31,5 +31,4 @@ Contact.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
 };
