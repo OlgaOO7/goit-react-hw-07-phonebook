@@ -4,7 +4,7 @@ import css from './Filter.module.css';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  // const filter = useSelector(getFilter);
+  const filter = useSelector(getFilter);
   // const handleFilterChange = evt => dispatch(changeFilter(evt.target.value));
   const handleFilterChange = evt => dispatch(changeFilter(evt.target.value));
 
@@ -14,7 +14,7 @@ export const Filter = () => {
       <input
         type="text"
         name="filter"
-        // value={filter}
+        value={filter}
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "redux/operations";
-import { getContacts, getError, getIsLoading } from "redux/contactsSlice";
+import { getError, getIsLoading } from "redux/contactsSlice";
 import { ContactForm } from '../ContactForm/ContactForm';
 import { Filter } from '../Filter/Filter';
 import { ContactsList } from '../ContactsList/ContactsList';
@@ -28,7 +28,7 @@ export default function App() {
       {/* {isLoading && <p>Loading contacts...</p>}
       {error && <p>{error}</p>}
       <p>{contacts.length > 0 && JSON.stringify(contacts, null, 2)}</p> */}
-      {/* {isLoading && !error && <b>Request in progree...</b>} */}
+      {isLoading && !error && <b>Loading contacts...</b>}
       {error && <p>Sorry, request is done with error: {error}</p>}
       <ContactsList />
     </div>
